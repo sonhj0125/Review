@@ -56,22 +56,22 @@
    ==> 어떤 클래스나 메소드 생성 시, javadoc 를 이용해서 API 문서를 만들 때 사용.   
 */
 
-.java
+```java
 package my.day01.copy;
 
 import java.util.Date;
 
-public class HelloTest {
+    public class HelloTest {
 
-   public static void main(String[] args) {
+        public static void main(String[] args) {
       
-      System.out.println("Hello, world");
+        System.out.println("Hello, world");
       
 // System.out 은 모니터
       
-/*
+/*   
    System.out.println("출력하고자 하는 문자열"); 은
-   모니터에 "출력하고자 하는 문자열" 을 출력      
+   모니터에 "출력하고자 하는 문자열" 을 출력         
 */
       
       System.out.print("안녕하세요.\n");
