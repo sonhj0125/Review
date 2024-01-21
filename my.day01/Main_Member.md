@@ -44,13 +44,14 @@ public class Member_main {
 		
 		System.out.println("\n-------------------------------------\n");
 		
-		lssMbr.id = "leess";  // = 은 같다가 아니라 대입해준다라는 말이다.
+		lssMbr.id = "leess";
+// = 은 같다가 아니라 대입해준다라는 말이다.
 		lssMbr.pwd = "abcd";
 		lssMbr.name = "이순신";
 		lssMbr.email = "leess@naver.com";
-//  lssMbr.school = "대졸"; -- school 은 Member 클래스에서 존재하지 않는 필드이므로 불가함.
+// lssMbr.school = "대졸"; -- school 은 Member 클래스에서 존재하지 않는 필드이므로 불가함.
 		
-//	lssMbr.address = "서울시 강남구"; 이렇게 사용해도 되지만, static 변수는 아래와 같이 클래스명.변수명으로 사용할 것을 권장함.
+// lssMbr.address = "서울시 강남구"; 이렇게 사용해도 되지만, static 변수는 아래와 같이 클래스명.변수명으로 사용할 것을 권장함.
 
 		Member.address = "서울시 강남구";
 
