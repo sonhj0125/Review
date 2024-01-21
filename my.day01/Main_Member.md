@@ -1,4 +1,4 @@
-## Main_Member
+## ▶ Main_Member
 
 * 콘솔프로그램의 실행은 main() 메소드에서 실행한다.
   
