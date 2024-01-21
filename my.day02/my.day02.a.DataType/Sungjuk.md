@@ -183,11 +183,11 @@ public class Sungjuk {
 		
 		System.out.println("=== " + name + " 님의 성적 결과 ===\n" +
 						   "1. 학번 : " + hakbun + "\n" +
-               "2. 성명 : " + name + "\n" +
+						   "2. 성명 : " + name + "\n" +
 						   "3. 국어 : " + kor + "\n" + 
-               "4. 영어 : " + eng + "\n" +
+               					   "4. 영어 : " + eng + "\n" +
 						   "5. 수학 : " + math + "\n" +
-               "6. 총점 : " + total + "\n" +
+              				     	   "6. 총점 : " + total + "\n" +
 						   "7. 평균1 : " + avg1 + "\n" +
 						   "8. 평균2 : " + avg2 + "\n" +
 						   "9. 평균3 : " + avg3 + "\n" +
