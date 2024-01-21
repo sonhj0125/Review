@@ -43,7 +43,7 @@ package my.day02;
 
 // String email = "몰라"; 초기화한 것.
 // 변수에 값을 넣어준 것 = 초기화
-   String email;
+  	 String email;
 
 // int age = 25;                   // int 는 정수타입
 	 int age;
@@ -54,7 +54,7 @@ package my.day02;
 // char grade = 'A';               // char 은 문자형 타입(글자 1개)
 	 char grade;
 	
-    void info_print() {
+    	 void info_print() {
 		
 // 지역변수(local variable)는 반드시 초기화(== 변수에 어떤 값을 부여하는 것)를 꼭 해주어야 한다.***
 // 지역변수는 { } 내에서만 사용되는 것으로 { } 을 벗어나는 순간, 지역변수는 자동적으로 메모리(RAM)에서 삭제되어진다.***
@@ -68,13 +68,13 @@ package my.day02;
 		
 		System.out.println("=== 회원정보 1 ===\n" +
 	                       "1. 아이디 : " + id + "\n" +
-				      	   "2. 비밀번호 : " + pwd + "\n" +
+			       "2. 비밀번호 : " + pwd + "\n" +
 	                       "3. 성명 : " + name + "\n" +
-				      	   "4. 이메일 : " + email + "\n" +
+			       "4. 이메일 : " + email + "\n" +
 	                       "5. 나이 : " + age + "\n" +
-				      	   "6. 신장 : " + height +"\n" + 
+			       "6. 신장 : " + height +"\n" + 
 	                       "7. 등급 : " + grade + "\n" +
-				      	   "8. 희망급여 : " + hope_money + "\n" +
+			       "8. 희망급여 : " + hope_money + "\n" +
 	                       "9. 주소 : " + address + "\n");
 		
 		/* 
@@ -92,19 +92,18 @@ package my.day02;
 		
 		System.out.println("=== 회원정보 2 ===\n" +
 	                       "1. 아이디 : " + id + "\n" +
-				      	   "2. 비밀번호 : " + pwd + "\n" +
+			       "2. 비밀번호 : " + pwd + "\n" +
 	                       "3. 성명 : " + name + "\n" +
-				      	   "4. 이메일 : " + email + "\n" +
+			       "4. 이메일 : " + email + "\n" +
 	                       "5. 나이 : " + age + "\n" +
-				      	   "6. 신장 : " + height +"\n" + 
+			       "6. 신장 : " + height +"\n" + 
 	                       "7. 등급 : " + grade + "\n" +
-				      	   "8. 희망급여 : " + hope_money + "\n" +
+			       "8. 희망급여 : " + hope_money + "\n" +
 	                       "9. 주소 : " + address + "\n");
 		
 	}
 	
-	
-	
+
 	public static void main(String[] args) {
 		
 		Main_01 ma1 = new Main_01(); // 인스턴스화(== 객체생성)
