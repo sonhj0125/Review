@@ -60,9 +60,9 @@ public class Member_main {
 		System.out.println("== lssMbr 이라는 인스턴스(객체)에 저장된 필드 값 출력하기 1번째 ==");
 		System.out.println("1. 아이디 : " + lssMbr.id + "\n" + 
 		                   "2. 비밀번호 : " + lssMbr.pwd + "\n" +  
-				               "3. 성명 : " + lssMbr.name + "\n" +
+				   "3. 성명 : " + lssMbr.name + "\n" +
 		                   "4. 이메일 : " + lssMbr.email + "\n" +
-//				             "5. 주소(비추) : " + lssMbr.address + "\n" +
+//				   "5. 주소(비추) : " + lssMbr.address + "\n" +
 		                   "5. 주소(권장) : " + Member.address + "\n");
 		
 		
@@ -77,10 +77,10 @@ public class Member_main {
 		System.out.println("== eom_mbr 이라는 인스턴스(객체)에 저장된 필드 값 출력하기 1번째 ==");
 		System.out.println("1. 아이디 : " + eom_mbr.id + "\n" + 
 		                   "2. 비밀번호 : " + eom_mbr.pwd + "\n" +  
-				               "3. 성명 : " + eom_mbr.name + "\n" +
+				   "3. 성명 : " + eom_mbr.name + "\n" +
 		                   "4. 이메일 : " + eom_mbr.email + "\n" +
-//			               "5. 주소(비추) : " + eom_mbr.address + "\n" +
-				               "5. 주소(권장) : " + Member.address + "\n");
+//			           "5. 주소(비추) : " + eom_mbr.address + "\n" +
+				   "5. 주소(권장) : " + Member.address + "\n");
 		
 		System.out.println("\n============================================\n");
 		
