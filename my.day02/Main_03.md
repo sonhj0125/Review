@@ -18,8 +18,8 @@ public class Main_03 {
 		MyUtil.current_time_print();
 // static 으로 고정시켰을 경우 클래스명.찍으면 됨
 		
-  // MyUtil util = new MyUtil();
-  // util.current_time_print();
+// MyUtil util = new MyUtil();
+// util.current_time_print();
 		
 		/*
 		  >> 여기는 Main_03 클래스 입니다. <<
