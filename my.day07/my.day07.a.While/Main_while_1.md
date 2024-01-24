@@ -104,8 +104,17 @@ public class Main_while_1 {
 4. 안녕 오라클!!
 5. 안녕 오라클!!
 
+		loop = 0;
+		while(true) {
+			if(++loop > 10)  // 탈출조건
+				break;
 
+			if(loop%2==0)
+				continue; // continue; 를 만나면 아래로 내려가지 않고 while()의 괄호 속의 조건식으로 이동
 
+			System.out.println(loop + ".Hi Oracle!");
+		} // end of while--------------------------------
+		System.out.println("\n>> 프로그램 종료 <<")
 
 
   } // end of main()--------------------------------------------
