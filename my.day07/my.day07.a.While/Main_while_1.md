@@ -15,29 +15,94 @@ while(조건식) {
 ```
 ```java
 package my.day07.a.While;
+
 public class Main_while_1 {
 
 	public static void main(String[] args) {
 
-  int cnt = 5, loop = 0;
+  		int cnt = 5, loop = 0;
 
-  while(loop < cnt) {
-        System.out.println( (loop+1) + ". 안녕 자바!!");
-        loop++;
-  }
-  System.out.println("\n>> 프로그램 종료 <<")
+  		while(loop < cnt) {
+        		System.out.println( (loop+1) + ". 안녕 자바!!");
+        		loop++;
+ 		 } // end of while--------------------------------
+  		System.out.println("\n>> 프로그램 종료 <<")
 
 <결과>
-1. 안녕 자바~~
-2. 안녕 자바~~
-3. 안녕 자바~~
-4. 안녕 자바~~
-5. 안녕 자바~~
-  } // end of main()----------------------------------------------
-}
+1. 안녕 자바!!
+2. 안녕 자바!!
+3. 안녕 자바!!
+4. 안녕 자바!!
+5. 안녕 자바!!
 
+// 또는
 
+		cnt = 5; loop = 0;
 
+		while(loop++ < cnt) {
+			System.out.println(loop + ". Hello 자바!!);
+		} // end of while--------------------------------
+		System.out.println("\n>> 프로그램 종료 <<")
+
+<결과>
+1. Hello 자바!!
+2. Hello 자바!!
+3. Hello 자바!!
+4. Hello 자바!!
+5. Hello 자바!!
+
+// 또는
+
+		cnt = 5; loop = 0;
+
+		while(loop < cnt) {
+			System.out.println(++loop + ". Hi Eclipse!!);
+		} // end of while--------------------------------
+		System.out.println("\n>> 프로그램 종료 <<")
+
+<결과>
+1. Hi Eclipse!!
+2. Hi Eclipse!!
+3. Hi Eclipse!!
+4. Hi Eclipse!!
+5. Hi Eclipse!!
+
+// 또는
+
+		loop = 0;
+
+		while(true) {
+			System.out.println(++loop + ". Hi 이클립스!!);
+			if(loop == 5)
+				break;
+		} // end of while--------------------------------
+		System.out.println("\n>> 프로그램 종료 <<")
+
+<결과>
+1. Hi 이클립스!!
+2. Hi 이클립스!!
+3. Hi 이클립스!!
+4. Hi 이클립스!!
+5. Hi 이클립스!!
+
+// 또는
+
+		loop = 0;
+
+		while( !(++loop > 5) ) {
+// (++loop > 5) 가 while 문을 빠져나가는 조건
+// 즉, 6이 되면 끝냄. () 안의 문장이 true 가 되면 ! 는 부정
+
+			System.out.println(loop + ". 안녕 오라클!!);
+		} // end of while--------------------------------
+		System.out.println("\n>> 프로그램 종료 <<")
+
+<결과>
+1. 안녕 오라클!!
+2. 안녕 오라클!!
+3. 안녕 오라클!!
+4. 안녕 오라클!!
+5. 안녕 오라클!!
 
 
 
