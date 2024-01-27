@@ -260,13 +260,6 @@ public class Main_operator {
 	System.out.println("num = " + num3);
 // num => 60
 
-
-
-
-
-
-
-
    } // end of main()-------------------------------------------------------------------
 
 }
