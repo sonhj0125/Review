@@ -99,7 +99,7 @@ public class Main_wrapper {
 //  ★★★ 암기 ★★★
 // index  (Baby) = (0123) , 위치값을 나타낼때, 0부터 시작
 		
-		char ch1 = str.charAt(0);  // 'B'가 리턴
+	char ch1 = str.charAt(0);  // 'B'가 리턴
 		System.out.println(ch1);   // B
 		
 		ch1 = str.charAt(3);       // 'y'
@@ -118,17 +118,56 @@ public class Main_wrapper {
 // @gmail.com             => 첫글자 @ 은(는) 특수문자입니다.
 
 
+	char c = input_str.charAt(0);
+		
+		if(Character.isUpperCase(c)) {   	// 대문자인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 대문자 입니다.");
+		}
+		else if(Character.isLowerCase(c)) {   	// 소문자인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 소문자 입니다.");
+		}
+		else if(Character.isDigit(c)) {   	// 숫자인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 숫자 입니다.");
+		}
+		else if('가' <= c && c <= '힣') {  	// 한글인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 한글 입니다.");
+		}
+		else if( c == ' ') {   			// 공백인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 공백 입니다.");
+		}						
+		else {  				 // ch2가 특수문자인지 알아보기
+			System.out.println("첫글자 "+c+"은(는) 특수문자 입니다.");
+		}
 
 
+	System.out.println("\n======================================\n");
 
+	System.out.println("== 오토박싱, 오토언박싱에 대해 알아보기 ==");
 
+	int a1 = 10;
 
+	Integer a2 = Integer.valueOf(a1);	// jdk 11 방식
+// 	Integer a2 = new Integer(a1); jdk 1.8 방식  // Boxing(박싱)
 
+	System.out.println("a2 => " + a2);	// a2 => 10
 
+	int b1 = 10;
+	Integer b2 = b1;			// Auto Boxing(박싱)
+	System.out.println("b2 => " + b2); 	// b2 => 10
 
+	System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
+	Integer a3 = Integer.valueOf(20);
+	int a4 = a3.intValue();			// UnBoxing(언박싱)
+	System.out.println("a4 => " + a4);	// a4 => 20
+
+	int a5 = Integer.valueOf(20);		// Auto UnBoxing(언박싱)
+	System.out.println("a5 => " + a5);	// a5 => 20
+
+	sc.close();
 
   } // end of main()------------------------------------------------------------------------
+
 }
 
 
