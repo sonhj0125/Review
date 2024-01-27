@@ -163,13 +163,69 @@ public class Main_operator {
 
 	System.out.println("\n------ 퀴즈1 ------\n");
 	int i = 1;
-	int j = i++;
-// int j = i, i = i + 1
+	int j = i++;    // int j = i, i = i + 1
 // i = 2; j = 1;
 
+	if( (i > ++j) & (i++ ==j) ) {
+/*
+   j = j + 1; j => 2가 되고 이후, i > j? => 2 > 2? => false
+   i == j; 이후, i = i + 1; => 2 == 2, i = 3 => true
+   ----------------
+   false  i ==> 3
+*/
 
+		i = i + j;
+	} // false 이므로 수행하지 않음
 
+	System.out.println("i = " + i);
+// i = 3
 
+	j = 1;
+	j = i++;
+// j = 1; i = i+1;
+// j ==> 1, i ==> 2
+
+	if( (i > ++j) && (i++ == j)) {
+/*
+   j = j+1; j==>2 이후 2 > 2? => false
+   false 이므로 나머지 스킵
+   ------------------------
+   false   i==>2
+*/
+	i = i + j;
+// false 이므로 수행하지 않음
+	}
+	System.out.println("i = " + i);
+// i = 2
+
+=====================================================================
+
+	System.out.println("\n~~~~~~~~ 퀴즈2 ~~~~~~~~~~\n");
+
+	int m1=0;
+	n1=1;
+		
+	if( (m1++ == 0) | (n1++ == 2) ) {
+/*
+   m1 == 0, m1 = m1+1 => 1  => true
+   n1 == 2 => false => n1 = n1+1 = 2
+*/
+	m1=42;  // 실행함
+		}
+	System.out.println("m1 => " + m1 + ", n1 => " + n1);  
+// m1 => 42, n1 => 2
+
+	m1 = 0;
+	n1 = 1;
+	if( (m1++ == 0) || (n1++ == 2) ) {
+/*
+   m1 == 0, m1 = m1+1 => 1 => true
+   앞이 true 이므로 뒤는 스킵함
+*/
+	m1=42;  // 실행함
+	}
+	System.out.println("m1 => " + m1 + ", n1 => " + n1);
+// m1 => 42, n1 => 1
 
 
 
