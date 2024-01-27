@@ -1,4 +1,4 @@
-## Main_Operator
+## ▶ Main_Operator
 
 * 산술연산자 : +, -, *, /
 
