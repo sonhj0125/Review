@@ -80,7 +80,7 @@ public class Main_scanner_1 {
 
   System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-  System.out.print(4. 단어를 입력하세요 => ");
+  System.out.print("4. 단어를 입력하세요 => ");
   String input_word = sc.next();
 
   System.out.println("입력한 단어 => " + input_word);
