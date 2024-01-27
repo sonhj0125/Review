@@ -72,6 +72,7 @@ public class Main_operator {
 		System.out.println("n+3 = "+ ((double)n/3));    // n+3 = 3.3333333333333335
 		System.out.println("n%3 = "+ (n%3));            // n%3 = 1  10을 3으로 나눌 때의 나머지
 
+=====================================================================
 
       System.out.println("\n==== 2. 증감연산자 ++ -- ====");
 
@@ -80,11 +81,91 @@ public class Main_operator {
    int b = 3;
 */
 // 또는
-      int a = 7; b = 3;
+	int a = 7; b = 3;
+	System.out.println("a => " + a);   // a => 7
+
+// a = a + 1;
+// 또는
+	a++;
+	System.out.println("a => " + a);   // a => 8
+
+	++a;
+	System.out.println("a => " + a);   // a => 9
 
 
+	System.out.println("b + > " + b);  // b => 3
 
+// b = b - 1;
+// 또는
 
+	b--;
+	System.out.println("b => " + b);   // b => 2
+
+	--b;
+	System.out.println("b => " + b);   // b => 1
+
+    
+	int x = 10, y = 10;
+	int z = ++x;
+	System.out.println("z => " + z);   // z => 11
+	System.out.println("x => " + x);   // x => 11
+
+	z = y++;
+	System.out.println("z => " + z);   // z => 10
+	System.out.println("y => " + y);   // y => 11
+
+	System.out.println("x => " + x++); // x => 11
+	System.out.println("x => " + x);   // x => 12
+
+	System.out.println("y => " + ++y); // y => 12
+	System.out.println("y => " + y);   // y => 12
+
+=====================================================================
+
+	System.out.println("\n==== 3. 논리 부정 연산자 ! ====");
+
+	boolean bool = false;
+	System.out.println("bool => " + bool);       // bool => false
+	System.out.println("!bool => " + !bool);     // !bool => true
+
+=====================================================================
+
+	System.out.println("\n==== 4. 논리 연산자 & | && || ====");
+
+	int c = 50, d = 60, e = 70;
+
+	bool = (c > d) && ( d < e) && (c == e);      // false
+// &&(그리고) 뒤는 **스킵**. &&는 그리고인데, 하나라도 false 가 나오면 false => 처리 속도 빠름
+	System.out.println("bool => " + bool);	     // bool => false
+
+	bool = (c > d) & (d < e) & (c == e);
+// false & true & false 를 보여줌, & 하나는 일단 전부 수행 후 판단
+	System.out.println("bool => " + bool);       // bool => false
+
+	bool = (c > d) || (d < e) || (c == e);
+// false  || true || **스킵** 
+	System.out.println("bool => " + bool);       // bool => true
+		
+	bool = (c > d) | (d < e) | (c == e);
+// false  | true | false, | 하나는 일단 전부 수행 후 판
+	System.out.println("bool => " + bool);    // bool => true
+
+=====================================================================
+
+	int n1 = 10;
+
+	if(n1 < 20) {
+	// true
+		System.out.println(">> n1은 20보다 작습니다.");
+	}
+
+=====================================================================
+
+	System.out.println("\n------ 퀴즈1 ------\n");
+	int i = 1;
+	int j = i++;
+// int j = i, i = i + 1
+// i = 2; j = 1;
 
 
 
