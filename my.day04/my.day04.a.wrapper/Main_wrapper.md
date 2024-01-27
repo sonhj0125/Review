@@ -52,14 +52,27 @@ public class Main_wrapper {
 
     System.out.println((char)('a' - 32));              // 65 => A
 
-		System.out.println(Character.toUpperCase('a'));    // A
-		System.out.println(Character.toLowerCase('A'));    // a
-		System.out.println(Character.toUpperCase(97));     // 97 = a, a => A, 65
-		System.out.println(Character.toLowerCase(65));     // 65 = A, A => a, 97
+    System.out.println(Character.toUpperCase('a'));    // A
+    System.out.println(Character.toLowerCase('A'));    // a
+    System.out.println(Character.toUpperCase(97));     // 97 = a, a => A, 65
+    System.out.println(Character.toLowerCase(65));     // 65 = A, A => a, 97
 
+    System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
-
-
+	char ch2 = 'c'; // 99
+		
+		if('A' <= ch2 && ch2 <= 'Z') {   // ch2가 대문자인지 알아보기, A는 65
+			System.out.println(ch2+"는 대문자 입니다.");
+		}
+		else if('a' <= ch2 && ch2 <= 'z') {   // ch2가 소문자인지 알아보기, a는 97
+			System.out.println(ch2+"는 소문자 입니다.");
+		}
+		else if('0' <= ch2 && ch2 <= '9') {   // ch2가 숫자인지 알아보기, 0은 48
+			System.out.println(ch2+"는 숫자 입니다.");
+		}
+		else {   // ch2가 특수문자인지 알아보기
+			System.out.println(ch2+"는 특수문자 입니다.");
+		}
 
 
 
