@@ -100,12 +100,12 @@ public class Main_sungjuk {
 
         System.out.println("\n>> 입력하신 "+input_str+"은(는) 올바른 데이터가 아닙니다.<<");
 					
-			  if(status == 1) { // 점수를 입력해주는 상태이라면
-				System.out.println("[점수에 대한 경고] 점수는 0 ~ 100 까지의 정수만 입력하세요!");
-			  }
-			  else { // 나이를 입력해주는 상태이라면
-				System.out.println("[나이에 대한 경고] 나이는 20 ~ 50 까지의 정수만 입력하세요!");
-		    }
+		if(status == 1) { // 점수를 입력해주는 상태이라면
+		System.out.println("[점수에 대한 경고] 점수는 0 ~ 100 까지의 정수만 입력하세요!");
+		}
+		else { // 나이를 입력해주는 상태이라면
+		System.out.println("[나이에 대한 경고] 나이는 20 ~ 50 까지의 정수만 입력하세요!");
+		}
 
         sc.close();
 
