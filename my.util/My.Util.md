@@ -148,6 +148,85 @@ public static long delete_character(String money) {
 } // end of public static long delete_character(String money)-----------------------------------------------------------------------
 
 
+// === 숫자에 3자리마다 ','를 추가해서 문자열로 리턴시켜주는 메소드 생성하기 === //
+
+public static String append_comma(long num) {
+
+	String temp = String.valueOf(num);
+	char[] origin_arr = temp.toCharArray();
+
+	int comma_len = (origin_arr.length%3 == 0)?(origin_arr.length/3)-1:(origin_arr.length/3);	// 글자길이에 맞춘 콤마개수
+	char[] result_arr = new char[origin_arr.length + comma_len];
+
+// 콤마가 들어가는 자리는 4, 8... 4의 배수자리, 뒤에서부터 콤마찍기
+for(int i = origin_arr.length-1, j = result_arr.length-1, count = 1; i>=0; i--, j--, count++) {
+	if(count%4 !=0) {
+		result_arr[j] = origin_arr[i];
+	}
+	else {
+		result_arr[j] = ',';	// 콤마를 중간에 끼웠기 때문에 i가 감소해서는 안됨
+		i++;
+	}
+
+} // end of for-------------------------------------------------------------
+
+	return String.valueOf(result_arr);
+
+} // end of public static String append_comma(long num)-----------------------------------------------------------------------
+
+
+// === 주민번호 7자리를 입력받아서 올바른 데이터인지 검사해주는 메소드 생성 === //
+
+public static boolean isCheckJubun(String jubun) {
+
+// jubun 의 길이는 7자리 이면서 마지막 7번째에 들어오는 문자는 "1" "2" "3" "4" 중에 하나이어야 한다.
+
+	if(jubun.length() != 7) {
+		return false;
+	}
+	else if( !("1".equals(jubun.substring(6)) || "2".equals(jubun.substring(6)) || "3".equals(jubun.substring(6)) || "4".equals(jubun.substring(6)) ) {
+		return false;
+	}
+	else {
+		String str_birthday = "";
+		if( "1".equals(jubun.substring(6)) || "2".equals(jubun.substring(6)) ) {
+			str_birthday = "19" + jubun.substring(0, 6);
+		}
+		else {
+			str_birthday = "20" + jubun.substring(0, 6);
+		}
+		simpleDateFormat sdformat = new SimpleDateFormat("yyyyMMdd");
+		sdformat.setLenient(false);
+		// false 로 해주어야만 입력한 값을 날짜 타입으로 변경할때 날짜로 되지 못하는 값일 경우 오류가 발생한다.
+		// 날짜로 파싱될 때 허술하게 하지 말고 엄격하게 하라고 설정해주는 것이라고 생각하면 된다. 
+
+
+// === 문자열을 날짜 형태로 변환하기 === //
+
+try {
+	Date birthday = sdformat.parse(str_birthday);
+
+	// 현재날짜(연월일)와 회원의 생일 날짜를 비교해서 회원의 생일 날짜가 현재날짜보다 이후라면 안된다.
+	Date now = new Date(); 				// 현재날짜시각
+	String str_now = sdformat.format(now);		// 20240131
+	now = sdformat.parse(str_now);
+
+	if(birthday.compareTo(now) > 0 ) {		// 생년월일이 현재일보다 미래인 경우
+		return false;
+	}
+	else {
+		return true;
+	}
+
+} catch (ParseException e) {
+	return false;
+
+} // end of try_catch--------------------------------------------------------------
+
+	} // end of if_else---------------------------------------------------------
+
+} // end of public static boolean isCheckJubun(String jubun)-----------------------------------------------------------------------
+
 
 
 
