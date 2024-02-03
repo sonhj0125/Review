@@ -154,24 +154,26 @@ int getAge() {
 
 // === 구직자의 정보를 한줄로 출력해주는 메소드 생성하기 === //
 
+String getinfo() {
 
+	StringBuilder sb = new StringBuilder();
 
+	sb.append(userid + "\t");
 
+	sb.append(passwd.substring(0, 3) + "*".repeat(passwd.length() - 3) + "\t");
 
+	sb.append(name + "\t");
 
+	sb.append(jubun.substring(0, 6) + "\t");	// (0, 6) 또는 (0, jubun.length() - 1)
 
+	sb.append(getGender() + "\t");
 
+	sb.append(getAgd() + "\t");
 
+	sb.append("\t" + register_day);
 
+	return sb.toString();	// 쌓인 정보들을 String 타입으로 변환
 
-
-
-
-
-
-
-
-
-
+} // end of String getinfo()--------------------------------------
 
 }
