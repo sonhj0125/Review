@@ -65,14 +65,37 @@
 
 ```java
 
+package my.day11.c.abstraction;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Gujikja {
+
+ // == fleid 생성 == //
+String userid; // 아이디
+String passwd; // 비밀번호
+String name;   // 성명
+String jubun;  // 주민번호, 앞자리 6자리 + 성별을 나타내는 1자리
+
+String register_day;  // 가입일자(자동적으로 생성됨)
+
+static int count;    // Gujikja 객체(인스턴스)의 개수를 알아오려는 용도, 다같이 공유
+
+
+// 기본생성자
+public Gujikja() {
+   Date now = new Date(); // 현재시각
+   SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+   register_day = df.format(now);
+   // 2024-01-30 15:12:10
+} // end of public Gujikja()----------------------------------------------------
 
 
 
 
 
-
-
-
-
-
-
+}
