@@ -42,33 +42,37 @@ pubilc class Main_Gujikja {
 	Ctrl_gujikja ctrl = new Ctrl_gujikja();
 
 	String str_menuno = "";
+	do {
+		ctrl.main_menu();
+		str_menuno = sc.nextLine();
+	
+		switch (str_menuno) {
+			case "1" : // 구직자 회원가입
+				ctrl.register(sc, gu_arr);
+				break;
+	
+			case "2" : // 구직자 모두보기
+				ctrl.view_all_info(gu_arr);
+				break;
+	
+			case "3" : // 검색하기
+				ctrl.search_menu(sc, gu_arr);
+				break;
+	
+			case "4" : // 프로그램 종료
+				
+				break;
+	
+			default : 
+				System.out.println("[경고] 메뉴에 없는 번호입니다.\n");
+				break;
+		} // end of switch (str_menuno)---------------------------
 
-	ctrl.main_menu();
-	str_menuno = sc.nextLine();
+	} while( !("4".equals(str_menuno)) );
+	// end of do_while---------------------------------------------------------------
 
-	switch (str_menuno) {
-		case "1" : // 구직자 회원가입
-			ctrl.register(sc, gu_arr);
-
-
-
-
-
-
-	} // end of switch (str_menuno)------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
+	sc.close();
+	System.out.println("\n>>> 프로그램 종료 <<<");
 
   } // end of public static void main(String[] args)-----------------------------------------------------------
 
