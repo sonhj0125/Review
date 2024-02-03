@@ -117,6 +117,36 @@ public static boolean isCheckPasswd(String passwd) {
 } // end of public static boolean isCheckPasswd(String passwd)-----------------------------------------------------------------------
 
 
+// === Main_string 문자열 합쳐서 $2,500,000 만들기 === //
+
+public static long delete_character(String money) {
+
+	do {
+		int dollor_index = money.indexOf("$");
+
+		if(dollor_index == -1)
+			break;
+
+		money = money.substring(0, dollor_index) + money.substring(dollor_index + 1);
+
+	} while(true);
+	// end of do_while---------------------------------------------------------
+
+	do {
+		int comma_index = money.indexOf(",");
+
+		if(comma_index == -1)
+			break;
+
+		money = money.substring(0, comma_index) + money.substring(comma_index + 1);
+
+	} while(true);
+	// end of do_while---------------------------------------------------------
+
+	return Long.parseLong(money);
+
+} // end of public static long delete_character(String money)-----------------------------------------------------------------------
+
 
 
 
