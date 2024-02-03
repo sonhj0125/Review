@@ -48,7 +48,7 @@ pubilc class Main_Gujikja {
 
 	switch (str_menuno) {
 		case "1" : // 구직자 회원가입
-
+			ctrl.register(sc, gu_arr);
 
 
 
