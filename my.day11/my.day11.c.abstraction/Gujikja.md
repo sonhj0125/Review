@@ -89,9 +89,9 @@ public Gujikja() {
    Date now = new Date(); // 현재시각
    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-
    register_day = df.format(now);
    // 2024-01-30 15:12:10
+
 } // end of public Gujikja()----------------------------------------------------
 
 
