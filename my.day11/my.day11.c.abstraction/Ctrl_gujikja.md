@@ -153,6 +153,27 @@ public class Ctrl_gujikja {
   } // end of void register(Scanner sc, Gujikja[] gu_arr)----------------------------------------------------------------
 
 
+// == 구직자 모두보기 메소드 == //
+void view_all_info(Gujikja[] gu_arr) {
+
+
+
+
+} end of void view_all_info(Gujikja[] gu_arr)----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
