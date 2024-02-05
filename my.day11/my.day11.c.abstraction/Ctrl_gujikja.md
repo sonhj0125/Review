@@ -166,17 +166,27 @@ void view_all_info(Gujikja[] gu_arr) {
 */
 		
   if(Gujikja.count == 0) {
-    System.out.println(">> 구직자로 가입된 회원이 존재하지 않습니다. <<\n");
+   	 System.out.println(">> 구직자로 가입된 회원이 존재하지 않습니다. <<\n");
   }
   else {
-    title();
+    	title();
+    	StringBuilder sb = new StringBuilder();
 
+	for(int i=0; i<Gujikja.count; i++) {
+		sb.append(gu_arr[i].getinfo()+"\n");
+	} // end of for-------------------------------------------------
+
+	System.out.println(sb.toString());
   }
-
 
 } end of void view_all_info(Gujikja[] gu_arr)----------------------------------------------------------------
 
+void title() {
+	System.out.println("-".repeat(75) + "\n"
+			+ "아이디\t
 
+
+} // end of void title()-------------------------------------------------
 
 
 
