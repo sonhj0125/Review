@@ -183,11 +183,22 @@ void view_all_info(Gujikja[] gu_arr) {
 
 void title() {
 	System.out.println("-".repeat(75) + "\n"
-			+ "아이디\t
-
-
+			+ "아이디\t비밀번호\t\t성명\t생년월일\t성별\t현재나이(만\t)가입일자 \n"
+			+ "-".repeat(75));
 } // end of void title()-------------------------------------------------
 
+
+// == 검색하기 메뉴를 보여주는 메소드 생성 == //
+
+void search_menu(Scanner sc, Gujikja[] gu_arr) {
+
+	String str_menuno = "";
+	do {
+
+
+	} while(!"4".equals(str_menuno));
+
+} // end of void search_menu(Scanner sc, Gujikja[] gu_arr)-------------------------------------------------
 
 
 
