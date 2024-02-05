@@ -194,6 +194,42 @@ void search_menu(Scanner sc, Gujikja[] gu_arr) {
 
 	String str_menuno = "";
 	do {
+		System.out.println("\n === 검색메뉴 ===\n"
+				+ "1. 연령대 검색   2. 성별 검색   3. 연령대 및 성별 검색   4. 메인메뉴\n");
+		Systme.out.print("▶ 검색메뉴번호 선택 : ");
+
+		str_menuno = sc.nextLine();
+
+		switch (str_menuno) {
+		case "1":
+
+			break;
+
+		case "2":
+
+			break;
+
+		case "3":
+
+			break;
+
+		case "4":
+
+			break;
+
+		default:
+
+			break;
+		} // end of switch-------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 	} while(!"4".equals(str_menuno));
