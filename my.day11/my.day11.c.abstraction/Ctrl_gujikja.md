@@ -201,43 +201,50 @@ void search_menu(Scanner sc, Gujikja[] gu_arr) {
 		str_menuno = sc.nextLine();
 
 		switch (str_menuno) {
-		case "1":
-
+		case "1": // 연령대 검색
+			search_ageLine(sc, gu_arr);
 			break;
 
-		case "2":
-
+		case "2":  // 성별 검색
+			search_gender(sc, gu_arr);
 			break;
 
-		case "3":
-
+		case "3":  // 연령대 및 성별 검색
+			search_ageLine_gender(sc, gu_arr);
 			break;
 
-		case "4":
-
+		case "4":  // 메인메뉴
 			break;
 
 		default:
-
+			System.out.println("[경고] 검색메뉴에 존재하는 번호만 입력해주세요.\n");
 			break;
 		} // end of switch-------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-	} while(!"4".equals(str_menuno));
+	} while(!"4".equals(str_menuno));		// 4번 선택 시 반복문 빠져나옴
+	// end of do_while--------------------------------------
 
 } // end of void search_menu(Scanner sc, Gujikja[] gu_arr)-------------------------------------------------
 
 
+// == 1. 연령대 검색해주는 메소드 == //
+void search_ageLine(Scanner sc, Gujikja[] gu_arr) {
 
+	if(Gujikja.count == 0) {
+		System.out.println(">> 구직자로 가입된 회원이 아무도 없습니다. <<\n");
+	}
+	else {		// 구직자가 존재하는 경우
+		String str_ageLine = "";
+		boolean isUse_ageLine = false;
+
+		do {
+			System.out.print("▶ 검색하고자 하는 연령대[예: 20] : ");
+
+		} while();
+	}
+
+
+
+} // end of void search_ageLine(Scanner sc, Gujikja[] gu_arr)-------------------------------------------------
 
 
 
