@@ -238,7 +238,7 @@ void search_ageLine(Scanner sc, Gujikja[] gu_arr) {
 
 		do {
 			System.out.print("▶ 검색하고자 하는 연령대[예: 20] : ");
-
+			str_ageLine = sc.nextLine();
 		} while();
 	}
 
