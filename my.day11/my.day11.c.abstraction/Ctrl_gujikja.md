@@ -240,7 +240,6 @@ void search_ageLine(Scanner sc, Gujikja[] gu_arr) {
 			System.out.print("▶ 검색하고자 하는 연령대[예: 20] : ");
 			str_ageLine = sc.nextLine();
 
-
 			switch(str_ageLine) {
 				case "0" :
 				case "10" :
@@ -257,6 +256,7 @@ void search_ageLine(Scanner sc, Gujikja[] gu_arr) {
 				System.out.println("[경고] 올바른 연령대를 기입하세요.\n);
 				break;
 			} // end of switch------------------------------------------
+
 		} while(!isUse_ageLine);
 		// end of do_while--------------------------------------------------
 
@@ -335,6 +335,111 @@ void search_gender(Scanner sc, Gujikja[] gu_arr) {
 
 } // end of void search_gender(Scanner sc, Gujikja[] gu_arr)---------------------------------------------------
 
+
+// == 3. 연령대 및 성별 검색하는 메소드 == //
+void search_ageLine_gender(scanner sc, Gujikja[] gu_arr) {
+
+	if(Gujikja.count == 0) {
+		Systme.out.println(">> 구직자로 가입된 회원이 아무도 없습니다. <<\n);
+		return;
+	}
+	else {
+
+	// 연령대 검색 시작
+	String str_ageLine = "";
+	boolean isUse_ageLine = false;
+	do {
+		System.out.print("▶ 검색하고자 하는 연령대[예: 20] : ");
+		str_ageLine = sc.nextLine();
+
+		switch(str_ageLine) {
+			case "0" :
+			case "10" :
+			case "20" :
+			case "30" :
+			case "40" :
+			case "50" :
+			case "60" :
+			case "70" :
+			case "80" :
+				isUse_ageLine = true;
+				break;
+		defalut :
+			System.out.println("[경고] 올바른 연령대를 기입하세요. \n");
+			break;
+		} // end of switch(str_ageLine)-----------------------------------------
+	} while(!isUse_ageLine);
+	// end of do_while-------------------------------------------------------------
+
+	// == 입력받은 연령대에 해당하는 구직자 찾기 == //
+	boolean is_ageline_search = false;
+
+	for(int i=0; i<Gujikja.count; i++) {
+		int ageLine = gu_arr[i].getAge()/10*10;
+
+		if(Integer.parseInt(str_ageLine) == ageLine) {
+			is_ageline_search = true;
+			break;
+		}
+
+	} // end of for--------------------------------------------------------------
+
+	if(!is_ageline_search) {
+		Systme.out.println("[검색결과 연령대 "+str_ageLine+"대인 구직자가 없습니다.]\n");
+		return;
+	}
+	else {
+
+		// 성별 검색 시작
+		String input_gender = "";
+		boolean isUse_input_gender = false;
+
+		do {
+			System.out.print("▶ 검색하고자 하는 성별[남/여] : ");
+			input_gender = sc.nextLine();
+
+			switch(input_gender.trim()) {
+				case "남" :
+				case "여" :
+					isUse_input_gender = true;
+					input_gender = input_gender.trim();
+					break;
+			defalut;
+				System.out.println("[경고] \"남\" 또는 \"여\" 만 입력하세요.\n");
+				break;
+
+			} // end of switch----------------------------------------------
+
+		} while(!isUse_input_gender);
+		// end of do_while------------------------------------------------------
+
+		// == 입력받은 연령대 및 성별에 해당하는 구독자 찾기 == //
+		StringBuilder sb = new StringBuilder();
+		boolean is_ageline_gender_Search = false;
+
+		for(int i=0; i<Gujikja.count; i++) {
+			if(Integer.parseInt(str_ageLine) == gu_arr[i].getAge()/10*10
+				&& input_gender.equals(gu_arr[i].getGender()) ) {
+
+				is_ageline_gender_Search = true;
+				sb.append(gu_arr[i].getinfo() + "\n");
+			}
+
+		} // end of for---------------------------------------------------------
+
+		if(is_ageline_gender_Search) {
+			title();
+			System.out.println(sb.toString());
+
+		}
+		else {
+			System.out.println("[검색결과 연령대 "+str_ageLine+"대인 " + input_gender +"자 구직자는 없습니다.]\n");
+		}
+			// === 성별 검색 끝 === //
+		}
+
+	} // end of if_else----------------------------------------------------------------
+} // end of void search_ageLine_gender(scanner sc, Gujikja[] gu_arr)-------------------------------------------
 
 
 
