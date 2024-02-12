@@ -442,10 +442,4 @@ void search_ageLine_gender(scanner sc, Gujikja[] gu_arr) {
 } // end of void search_ageLine_gender(scanner sc, Gujikja[] gu_arr)-------------------------------------------
 
 
-
-
-
-
-
-
 }
