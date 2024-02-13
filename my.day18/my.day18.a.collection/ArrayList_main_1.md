@@ -45,20 +45,20 @@ public class ArrayList_main_1 {
 		// my_list 의 크기 : 0
 		
 		my_list.add(new String("이순신"));
-		my_list.add("엄정화");				// AutoBoxing
+		my_list.add("엄정화");							// AutoBoxing
 		
 		System.out.println("my_list 의 크기 : " + my_list.size());		// .length == .size
 		// my_list 의 크기 : 2
 		
 		my_list.add(new Integer(98));
 		my_list.add(Integer.valueOf(100));
-		my_list.add(80);					// AutoBoxing, int ---> Integer 로 autoboxing 해준다.
+		my_list.add(80);							// AutoBoxing, int ---> Integer 로 autoboxing 해준다.
 		// my_list 의 크기 : 4
 		
 		
 		my_list.add(new Double(1234.5));
 		my_list.add(Double.valueOf(2345.6));
-		my_list.add(4345.7);				// double --> Double 로 autoboxing 해준다.
+		my_list.add(4345.7);							// double --> Double 로 autoboxing 해준다.
 		
 		
 //		my_list.add(new Member());
