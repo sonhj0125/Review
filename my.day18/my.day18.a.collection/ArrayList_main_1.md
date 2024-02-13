@@ -28,4 +28,81 @@ Map  계열    --      HashMap        ,               Hashtable
    
  * Vector 및 Hashtable 이 Multi Thread를 지원해주므로 무겁다.
 
- * Multi Thread를 지원해주는냐 안해주느냐만 차이가 있을 뿐 그 나머지 기능은 동일하다.  
+ * Multi Thread를 지원해주는냐 안해주느냐만 차이가 있을 뿐 그 나머지 기능은 동일
+
+```java
+package my.day18.a.collection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayList_main_1 {
+
+	public static void main(String[] args) {
+		
+		List my_list = new ArrayList();
+		System.out.println("my_list 의 크기 : " + my_list.size());		// .length == .size
+		// my_list 의 크기 : 0
+		
+		my_list.add(new String("이순신"));
+		my_list.add("엄정화");				// AutoBoxing
+		
+		System.out.println("my_list 의 크기 : " + my_list.size());		// .length == .size
+		// my_list 의 크기 : 2
+		
+		my_list.add(new Integer(98));
+		my_list.add(Integer.valueOf(100));
+		my_list.add(80);					// AutoBoxing, int ---> Integer 로 autoboxing 해준다.
+		// my_list 의 크기 : 4
+		
+		
+		my_list.add(new Double(1234.5));
+		my_list.add(Double.valueOf(2345.6));
+		my_list.add(4345.7);				// double --> Double 로 autoboxing 해준다.
+		
+		
+//		my_list.add(new Member());
+        // my_list 의 크기 : 9
+		
+		for(int i=0; i<91; i++) {
+//		my_list.add(new Member());
+		} // end of for----------------------------------------------------
+		
+		System.out.println("my_list 의 크기 : " + my_list.size());		// .length == .size
+		// my_list 의 크기 : 100
+		
+		
+		System.out.println("\n===========================================================\n");
+		
+		for(int i=0; i<9; i++) {
+			System.out.println(my_list.get(i));
+		} // end of for-----------------------------------------------------
+		/*
+		   이순신
+		   엄정화
+		   98
+		   100
+		   80
+		   1234.5
+		   2345.6
+		   4345.7
+		   my.day18.a.collection.Member@5f5a92bb		  
+		*/
+		
+		
+		my_list.add(999);
+		
+		System.out.println("\n=== my_list 에 저장되어진 데이터 중 정수데이터만 출력하기 ===\n");
+		
+		for(int i=0; i<my_list.size(); i++) {
+			if(my_list.get(i) instanceof Integer) {
+				System.out.println(my_list.get(i));
+			}
+		} // end of for-----------------------------------------------------
+		
+		/*
+		   98 
+		   100 
+		   80 
+		   999  
+		*/
