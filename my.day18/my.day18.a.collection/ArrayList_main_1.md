@@ -158,6 +158,48 @@ JDK 1.5 부터 제네릭(Generic)타입이 새로 추가되면서, 특정 컬렉
 
 key값이라고 나타내고 싶을때는 <K>라고 쓰고, Value값이라고 나타내고 싶을때는 <V>라고 쓴다.
 ```
+```java
+//		List<String> str_list = new ArrayList<String>();		// JDK 8 이전버전, String 만 들어올 수 있다.
+//		List<String> str_list = new ArrayList<>();			// JDK 8 이후버전		
+//		List<> str_list = new ArrayList<String>();			// 오류
+//		List<> str_list = new ArrayList<>();				// 오류
+		
+		List<String> str_list = new ArrayList<>();
+				
+		str_list.add("마동석");
+//		str_list.add(12345);						// 오류
+//		str_list.add(1.234235); 					// 오류
+//		str_list.add(new Member()); 					// 오류
+		str_list.add("마서석");
+		str_list.add("마남석");
+		str_list.add("마북석");
+		str_list.add("중앙석");
+		
+		
+		List<Member> mbr_list = new ArrayList<Member>();		// Member 만 들어올 수 있다.
+		
+//		mbr_list.add("마동석");						// 오류
+//		mbr_list.add(12345);						// 오류
+//		mbr_list.add(1.234235); 					// 오류
+//		mbr_list.add(new Member()); 
+		
+								
+		for(int i=0; i<str_list.size(); i++) {
+			System.out.println(str_list.get(i));
+		} // end of for-------------------------------------
+		
+		
+		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~\n");
+		
+		
+		for(String str : str_list) {
+			System.out.println(str);
+		} // end of for-------------------------------------
+		
+		
+		
 
+	} // end of main()------------------------------------------------------------------------------
 
-
+}
+```
